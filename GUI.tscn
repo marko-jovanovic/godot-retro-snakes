@@ -1,0 +1,251 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/fonts/Retro Gaming.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/light-box.png" type="Texture" id=2]
+[ext_resource path="res://assets/menu-line.png" type="Texture" id=3]
+[ext_resource path="res://GUI.cs" type="Script" id=4]
+[ext_resource path="res://assets/bar-background.png" type="Texture" id=5]
+[ext_resource path="res://assets/bar-progress.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.596078, 0.690196, 0.635294, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="GUI" type="PanelContainer"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -146.0
+margin_top = -240.0
+margin_bottom = 240.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+margin_right = 146.0
+margin_bottom = 480.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 0
+custom_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer"]
+margin_right = 136.0
+margin_bottom = 480.0
+alignment = 2
+
+[node name="MenuLine" type="TextureRect" parent="MenuContainer/HBoxContainer"]
+margin_right = 3.0
+margin_bottom = 480.0
+texture = ExtResource( 3 )
+
+[node name="VSeparator" type="VSeparator" parent="MenuContainer/HBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 7.0
+margin_right = 41.0
+margin_bottom = 480.0
+custom_constants/separation = 34
+
+[node name="Menu" type="VBoxContainer" parent="MenuContainer/HBoxContainer"]
+margin_left = 45.0
+margin_right = 136.0
+margin_bottom = 480.0
+
+[node name="Score" type="VBoxContainer" parent="MenuContainer/HBoxContainer/Menu"]
+margin_right = 91.0
+margin_bottom = 46.0
+
+[node name="ScoreTitle" type="Label" parent="MenuContainer/HBoxContainer/Menu/Score"]
+margin_right = 91.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.258824, 0.258824, 0.258824, 1 )
+text = "Score"
+align = 2
+
+[node name="ScoreValue" type="Label" parent="MenuContainer/HBoxContainer/Menu/Score"]
+margin_top = 25.0
+margin_right = 91.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10"
+align = 2
+
+[node name="HiScore" type="VBoxContainer" parent="MenuContainer/HBoxContainer/Menu"]
+margin_top = 50.0
+margin_right = 91.0
+margin_bottom = 96.0
+
+[node name="HiScoreTitle" type="Label" parent="MenuContainer/HBoxContainer/Menu/HiScore"]
+margin_right = 91.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.258824, 0.258824, 0.258824, 1 )
+text = "Hi-Score"
+align = 2
+
+[node name="HiScoreValue" type="Label" parent="MenuContainer/HBoxContainer/Menu/HiScore"]
+margin_top = 25.0
+margin_right = 91.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10"
+align = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/HBoxContainer/Menu"]
+margin_top = 100.0
+margin_right = 91.0
+margin_bottom = 169.0
+custom_constants/separation = 0
+
+[node name="LevelProgressTitle" type="Label" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer"]
+margin_right = 91.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.258824, 0.258824, 0.258824, 1 )
+text = "Next"
+align = 2
+
+[node name="LevelProgressRow1" type="HBoxContainer" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer"]
+margin_top = 21.0
+margin_right = 91.0
+margin_bottom = 37.0
+custom_constants/separation = 0
+alignment = 2
+
+[node name="LevelProgressItem1" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow1"]
+margin_left = 27.0
+margin_right = 43.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem2" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow1"]
+margin_left = 43.0
+margin_right = 59.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem3" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow1"]
+margin_left = 59.0
+margin_right = 75.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem4" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow1"]
+margin_left = 75.0
+margin_right = 91.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressRow2" type="HBoxContainer" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer"]
+margin_top = 37.0
+margin_right = 91.0
+margin_bottom = 53.0
+custom_constants/separation = 0
+alignment = 2
+
+[node name="LevelProgressItem5" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow2"]
+margin_left = 27.0
+margin_right = 43.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem6" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow2"]
+margin_left = 43.0
+margin_right = 59.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem7" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow2"]
+margin_left = 59.0
+margin_right = 75.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem8" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow2"]
+margin_left = 75.0
+margin_right = 91.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressRow3" type="HBoxContainer" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer"]
+margin_top = 53.0
+margin_right = 91.0
+margin_bottom = 69.0
+custom_constants/separation = 0
+alignment = 2
+
+[node name="LevelProgressItem9" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow3"]
+margin_left = 27.0
+margin_right = 43.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem10" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow3"]
+margin_left = 43.0
+margin_right = 59.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem11" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow3"]
+margin_left = 59.0
+margin_right = 75.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="LevelProgressItem12" type="TextureRect" parent="MenuContainer/HBoxContainer/Menu/VBoxContainer/LevelProgressRow3"]
+margin_left = 75.0
+margin_right = 91.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+
+[node name="Level" type="VBoxContainer" parent="MenuContainer/HBoxContainer/Menu"]
+margin_top = 173.0
+margin_right = 91.0
+margin_bottom = 219.0
+
+[node name="LevelTitle" type="Label" parent="MenuContainer/HBoxContainer/Menu/Level"]
+margin_right = 91.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.258824, 0.258824, 0.258824, 1 )
+text = "Level"
+align = 2
+
+[node name="LevelValue" type="Label" parent="MenuContainer/HBoxContainer/Menu/Level"]
+margin_top = 25.0
+margin_right = 91.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 2
+
+[node name="Dash" type="VBoxContainer" parent="MenuContainer/HBoxContainer/Menu"]
+margin_top = 223.0
+margin_right = 91.0
+margin_bottom = 264.0
+alignment = 2
+
+[node name="DashTitle" type="Label" parent="MenuContainer/HBoxContainer/Menu/Dash"]
+margin_right = 91.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.258824, 0.258824, 0.258824, 1 )
+text = "Dash"
+align = 2
+
+[node name="DashProgress" type="TextureProgress" parent="MenuContainer/HBoxContainer/Menu/Dash"]
+margin_top = 25.0
+margin_right = 91.0
+margin_bottom = 41.0
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 6 )

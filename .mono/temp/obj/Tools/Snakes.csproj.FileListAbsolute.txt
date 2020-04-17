@@ -1,0 +1,6 @@
+C:\Users\Marko&Tamara\Documents\GodotGames\Snakes\.mono\temp\bin\Tools\Snakes.dll
+C:\Users\Marko&Tamara\Documents\GodotGames\Snakes\.mono\temp\bin\Tools\Snakes.pdb
+C:\Users\Marko&Tamara\Documents\GodotGames\Snakes\.mono\temp\obj\Tools\Snakes.csprojAssemblyReference.cache
+C:\Users\Marko&Tamara\Documents\GodotGames\Snakes\.mono\temp\obj\Tools\Snakes.csproj.CoreCompileInputs.cache
+C:\Users\Marko&Tamara\Documents\GodotGames\Snakes\.mono\temp\obj\Tools\Snakes.dll
+C:\Users\Marko&Tamara\Documents\GodotGames\Snakes\.mono\temp\obj\Tools\Snakes.pdb
